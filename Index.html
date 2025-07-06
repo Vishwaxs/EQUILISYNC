@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EquiliSync – Holistic Wellness Platform</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+  
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+      <div class="flex items-center space-x-2">
+        <span class="text-xl text-teal-600"><i class="fas fa-brain"></i></span>
+        <span class="font-bold text-lg">EquiliSync</span>
+      </div>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="#wellness" class="nav-link flex items-center gap-2 hover:text-teal-600"><i class="fas fa-spa"></i>Wellness</a>
+        <a href="#fitness" class="nav-link flex items-center gap-2 hover:text-teal-600"><i class="fas fa-dumbbell"></i>Fitness</a>
+        <a href="#location" class="nav-link flex items-center gap-2 hover:text-teal-600"><i class="fas fa-map-marker-alt"></i>Location</a>
+        <a href="#feedback" class="nav-link flex items-center gap-2 hover:text-teal-600"><i class="fas fa-comments"></i>Feedback</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-2xl text-gray-700 focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="#wellness" class="block py-2 nav-link flex items-center gap-2 hover:text-teal-600"><i class="fas fa-spa"></i>Wellness</a>
+      <a href="#fitness" class="block py-2 nav-link flex items-center gap-2 hover:text-teal-600"><i class="fas fa-dumbbell"></i>Fitness</a>
+      <a href="#location" class="block py-2 nav-link flex items-center gap-2 hover:text-teal-600"><i class="fas fa-map-marker-alt"></i>Location</a>
+      <a href="#feedback" class="block py-2 nav-link flex items-center gap-2 hover:text-teal-600"><i class="fas fa-comments"></i>Feedback</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="wellness" class="relative min-h-[60vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 text-center text-white px-4 py-24">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Balance Mind, Body & Spirit</h1>
+      <p class="text-lg md:text-2xl mb-8">Your journey to holistic wellness starts here. Explore mindfulness, fitness, and ancient wisdom with EquiliSync.</p>
+      <a href="#fitness" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-lg text-lg shadow-lg transition"><i class="fas fa-heartbeat mr-2"></i>Start Now</a>
+    </div>
+  </section>
+
+  <!-- Fitness Section -->
+  <section id="fitness" class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row gap-8 items-center">
+      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Fitness" class="w-full md:w-1/2 rounded-xl shadow-lg">
+      <div>
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-dumbbell text-teal-600"></i>Modern Fitness</h2>
+        <p class="mb-4 text-gray-700">Personalized workout routines, progress tracking, and integration with your favorite fitness apps. Whether you prefer the gym, yoga, or home workouts, EquiliSync adapts to your lifestyle.</p>
+        <ul class="list-disc ml-6 text-gray-600">
+          <li>Custom plans for strength, flexibility, and endurance</li>
+          <li>Guided video sessions</li>
+          <li>Progress analytics and motivation tools</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section (Geolocation + iframe) -->
+  <section id="location" class="py-12 bg-gray-100">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Find Your Wellness Center</h2>
+      <button id="get-location" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Get My Location</button>
+      <div id="location-data" class="mt-4 text-gray-700 hidden"></div>
+      <div class="mt-8">
+        <h3 class="font-semibold mb-2">Sample Meditation Center Location</h3>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019024267937!2d-122.41941508468102!3d37.77492977975916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5d3d5c47%3A0x2e0e7c7e6e3a7b7a!2sSan+Francisco+Zen+Center!5e0!3m2!1sen!2sus!4v1688900000000!5m2!1sen!2sus" 
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Guided Meditation Video</h2>
+      <p class="mb-6 text-gray-600">Follow along with our expert instructors for a calming meditation session.</p>
+      <video controls class="w-full rounded-xl shadow-lg" poster="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=800">
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        <track kind="subtitles" src="subtitles.vtt" srclang="en" label="English" default>
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Audio Section -->
+  <section class="py-12 bg-gray-100">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Relaxing Soundscapes</h2>
+      <p class="mb-4 text-gray-600">Instrumental music to enhance your mindfulness and relaxation.</p>
+      <div class="flex items-center justify-center gap-3 mb-2">
+        <i class="fas fa-music text-teal-600 text-2xl"></i>
+        <span class="text-lg font-semibold">Peaceful Mind</span>
+      </div>
+      <audio controls class="w-full">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        <source src="https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section id="feedback" class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">Your Feedback</h2>
+      <form id="feedback-form" class="bg-gray-100 rounded-xl shadow-lg p-8 space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium mb-1">Name</label>
+          <input type="text" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500">
+        </div>
+        <div>
+          <label for="comment" class="block text-sm font-medium mb-1">Feedback</label>
+          <textarea id="comment" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"></textarea>
+        </div>
+        <button type="submit" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-lg transition"><i class="fas fa-paper-plane mr-2"></i>Submit</button>
+      </form>
+      <div id="feedback-list" class="mt-10 space-y-4"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      <div class="flex items-center gap-2 mb-4 md:mb-0">
+        <i class="fas fa-brain text-teal-400 text-2xl"></i>
+        <span class="font-bold">EquiliSync</span>
+      </div>
+      <div class="flex gap-6 mb-4 md:mb-0">
+        <a href="#" class="hover:text-teal-400"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-teal-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-teal-400"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="text-sm text-gray-300">
+        &copy; 2025 EquiliSync. Developed by Vishwas Vashishtha.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
